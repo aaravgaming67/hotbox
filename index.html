@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Book PC and PlayStation gaming sessions at HotBox - PC & PS Gaming Lounge, Thane.">
+    <title>HotBox - PC & PS Gaming Lounge Thane</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="HotBox home">
+        <span class="brand-mark">HB</span>
+        <span>
+          <strong>HotBox</strong>
+          <small>PC & PS Gaming Lounge</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#stations">Stations</a>
+        <a href="#book">Book</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <a class="nav-cta" href="#book">
+        <i data-lucide="calendar-check"></i>
+        Book Now
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1800&q=85" alt="">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Thane's plug-in-and-play arena</p>
+          <h1>HotBox - PC & PS Gaming Lounge</h1>
+          <p class="hero-copy">Reserve a high-refresh PC setup or a PlayStation couch session in seconds. Choose your slot, lock your setup, and show up ready to play.</p>
+
+          <div class="hero-actions">
+            <a class="primary-action" href="#book">
+              <i data-lucide="gamepad-2"></i>
+              Book a Slot
+            </a>
+            <a class="secondary-action" href="#stations">
+              <i data-lucide="monitor"></i>
+              View Setups
+            </a>
+          </div>
+
+          <div class="quick-stats" aria-label="Lounge highlights">
+            <span><strong>PC</strong> 144Hz gaming</span>
+            <span><strong>PS5</strong> couch co-op</span>
+            <span><strong>Open</strong> daily</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-section" aria-label="HotBox highlights">
+        <div>
+          <p class="section-kicker">Built for squads, solos, and late-night runs</p>
+          <h2>Book your next match before the lobby fills.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <i data-lucide="zap"></i>
+            <h3>Fast rigs</h3>
+            <p>Smooth PC sessions for FPS, battle royale, racing, sports, and tournament nights.</p>
+          </article>
+          <article class="feature">
+            <i data-lucide="sofa"></i>
+            <h3>PS zones</h3>
+            <p>Comfortable PlayStation setups for FIFA, Tekken, WWE, story games, and party play.</p>
+          </article>
+          <article class="feature">
+            <i data-lucide="users"></i>
+            <h3>Squad ready</h3>
+            <p>Reserve multiple players, estimate session cost, and keep booking details on screen.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stations-section" id="stations">
+        <div class="section-heading">
+          <p class="section-kicker">Choose your setup</p>
+          <h2>Stations and pricing</h2>
+        </div>
+
+        <div class="station-grid">
+          <article class="station-card">
+            <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80" alt="Gaming PC station with keyboard and monitor">
+            <div>
+              <span class="station-tag">Most booked</span>
+              <h3>Performance PC</h3>
+              <p>High-refresh display, gaming keyboard, mouse, headset, and competitive titles ready.</p>
+              <strong>Rs 120 / hour</strong>
+            </div>
+          </article>
+
+          <article class="station-card">
+            <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=900&q=80" alt="PlayStation controller close up">
+            <div>
+              <span class="station-tag">Squad pick</span>
+              <h3>PS5 Bay</h3>
+              <p>Console setup for couch multiplayer, sports battles, fighting games, and chill sessions.</p>
+              <strong>Rs 100 solo / Rs 180 duo</strong>
+            </div>
+          </article>
+
+          <article class="station-card">
+            <img src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80" alt="Gaming lounge with neon lighting">
+            <div>
+              <span class="station-tag">Group run</span>
+              <h3>Squad Block</h3>
+              <p>Book 4 players together for LAN-style play, party games, and birthday sessions.</p>
+              <strong>From Rs 450 / hour</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking-band" id="book">
+        <div class="booking-copy">
+          <p class="section-kicker">Instant booking</p>
+          <h2>Reserve your HotBox slot</h2>
+          <p>Select your station, game, date, time, and players. Your booking is saved with a booking ID, and can sync to Firebase once configured.</p>
+          <div class="booking-note">
+            <i data-lucide="info"></i>
+            Firebase is wired in. Add your Firebase project details in firebase-config.js to store bookings online.
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row two-col">
+            <label>
+              Name
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </label>
+            <label>
+              Phone
+              <input id="phone" name="phone" type="tel" placeholder="10-digit mobile" pattern="[0-9 +()-]{8,16}" required>
+            </label>
+          </div>
+
+          <div class="form-row two-col">
+            <label>
+              Setup
+              <select id="setup" name="setup" required>
+                <option value="Performance PC" data-rate="120" data-pricing="per-player">Performance PC - Rs 120/hr/player</option>
+                <option value="PS5 Bay" data-solo-rate="100" data-duo-rate="180" data-pricing="ps5">PS5 Bay - Rs 100 solo, Rs 180 duo</option>
+                <option value="Squad Block" data-rate="450" data-pricing="flat">Squad Block - Rs 450/hr</option>
+              </select>
+            </label>
+            <label>
+              Game
+              <select id="game" name="game" required>
+                <option>Valorant</option>
+                <option>GTA V</option>
+                <option>FIFA / FC</option>
+                <option>Tekken</option>
+                <option>Call of Duty</option>
+                <option>Other / decide there</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row three-col">
+            <label>
+              Date
+              <input id="date" name="date" type="date" required>
+            </label>
+            <label>
+              Start time
+              <input id="time" name="time" type="time" min="10:00" max="23:30" required>
+            </label>
+            <label>
+              Hours
+              <input id="hours" name="hours" type="number" min="1" max="8" value="1" required>
+            </label>
+          </div>
+
+          <div class="form-row two-col">
+            <label>
+              Players
+              <input id="players" name="players" type="number" min="1" max="8" value="1" required>
+            </label>
+            <label>
+              Notes
+              <input id="notes" name="notes" type="text" placeholder="Any preferred seat or game">
+            </label>
+          </div>
+
+          <div class="booking-total">
+            <span>Estimated total</span>
+            <strong id="total">Rs 120</strong>
+          </div>
+
+          <button class="submit-button" type="submit">
+            <i data-lucide="calendar-plus"></i>
+            Confirm Booking
+          </button>
+        </form>
+      </section>
+
+      <section class="section bookings-section" aria-label="Your saved bookings">
+        <div class="section-heading">
+          <p class="section-kicker">Your slots</p>
+          <h2>Saved bookings</h2>
+        </div>
+        <div class="booking-list" id="bookingList"></div>
+      </section>
+
+      <section class="visit-section" id="visit">
+        <div class="visit-panel">
+          <p class="section-kicker">Visit HotBox</p>
+          <h2>PC & PS Gaming Lounge in Thane</h2>
+          <p>Update this section with the exact shop address, Google Maps link, and official phone number before going live.</p>
+          <div class="contact-grid">
+            <a href="tel:+910000000000">
+              <i data-lucide="phone"></i>
+              +91 00000 00000
+            </a>
+            <a href="https://maps.google.com/?q=Thane" target="_blank" rel="noreferrer">
+              <i data-lucide="map-pin"></i>
+              Thane, Maharashtra
+            </a>
+            <a href="mailto:bookings@hotboxgaming.in">
+              <i data-lucide="mail"></i>
+              bookings@hotboxgaming.in
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+      <span>HotBox - PC & PS Gaming Lounge, Thane</span>
+      <a href="#book">Book a session</a>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
