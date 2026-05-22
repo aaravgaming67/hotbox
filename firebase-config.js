@@ -1,4 +1,4 @@
-export const firebaseConfig = {
+export const firebaseConfig = {https://hotboxgaming-51dc2-default-rtdb.asia-southeast1.firebasedatabase.app/
   apiKey: "",
   authDomain: "",
   projectId: "",
